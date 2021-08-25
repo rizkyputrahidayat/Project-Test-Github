@@ -1,4 +1,3 @@
-// import logo from './logo.svg';
 import { useState } from "react";
 import axios from 'axios';
 import './App.css';
@@ -37,15 +36,16 @@ function App() {
   return (
     <div className="page">
       <div className="landing-page-container">
-        <div className="left-side">
+        <div className="center-side">
+          <h2 className="head"> Explore Your Github </h2>
           <form className="form">
             <input
               className="input"
               value={username}
-              placeholder="Nama Github"
+              placeholder="Nama Github..."
               onChange={e => setUsername(e.target.value)}
             />
-            <button className="button" onClick={handleSubmit}>{loading ? "Pencarian" : "Search"}</button>
+            <button className="button" onClick={handleSubmit}>{loading ? "Pencarian" : "Cari"}</button>
           </form>
           <div className="results-container">
             {repos.map(renderRepo)}
